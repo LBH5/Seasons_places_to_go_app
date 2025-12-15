@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="164dp"
+    android:background="@color/white"
+    android:padding="18dp">
+
+    <TextView
+        android:id="@+id/text_view_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/card_view_bucket_entry_image_container"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#272727"
+        android:textSize="18sp"
+        tools:text="1 - Place name" />
+
+    <TextView
+        android:id="@+id/text_view_bucket_entry_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_heading"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@id/card_view_bucket_entry_image_container"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#777777"
+        android:textSize="14sp"
+        tools:text="Place description goes here ... !
+        It will be a very very long text to describe the place" />
+
+
+    <RatingBar
+        android:id="@+id/rating_bar_place_rating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/card_view_bucket_entry_image_container"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/gray"
+        android:progressTint="@color/gold"
+        android:secondaryProgressTint="@color/light_gold"
+        android:stepSize="0.5"
+        tools:rating="3.5f" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_bucket_entry_image_container"
+        android:layout_width="164dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="12dp"
+        app:cardCornerRadius="18dp">
+
+        <ImageView
+            android:id="@+id/image_view_bucket_entry_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/winter" />
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
